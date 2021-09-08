@@ -12,7 +12,7 @@ apply from: "../../node_modules/react-native/react.gradle"
 def enableSeparateBuildPerCPUArchitecture = true
 
 
-def enableProguardInReleaseBuilds = false
+def enableProguardInReleaseBuilds = true
 
 
 def jscFlavor = 'org.webkit:android-jsc:+'
@@ -55,6 +55,7 @@ android {
         release {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
+            shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
