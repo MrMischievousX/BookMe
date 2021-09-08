@@ -7,6 +7,7 @@ import { asyncBookList, asyncSignOut } from '../reduxConfig/actions';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Header } from "react-native-elements"
+import LottieView from 'lottie-react-native';
 
 export default function OrderScreen({ navigation }) {
   const { bookList, user } = useSelector((state) => state);
@@ -42,10 +43,7 @@ export default function OrderScreen({ navigation }) {
       <Header
         backgroundColor="transparent"
       />
-      <Image
-        source={require('../assets/book.gif')}
-        style={{ width: 400, height: 400 }}
-      />
+      <LottieView source={require('../assets/book.json')} autoPlay loop />
       <Text style={styles.load}> Loading Books </Text>
     </View>
 
@@ -104,6 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     fontWeight: "900",
     letterSpacing: 1,
+    marginTop: 350,
     fontFamily: "sans-serif"
   }
 })

@@ -42,7 +42,7 @@ export default function BookDetailScreen({ navigation, route }) {
                 />
                 <View style={styles.conatiner}>
                     <Image
-                        source={{ uri: imageLinks.thumbnail }}
+                        source={{ uri: imageLinks.thumbnail.slice(0, 4) + 's' + imageLinks.thumbnail.slice(4) }}
                         style={{
                             width: windowWidth / 1.5,
                             height: windowHeight / 2.5,

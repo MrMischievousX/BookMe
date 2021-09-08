@@ -12,7 +12,7 @@ apply from: "../../node_modules/react-native/react.gradle"
 def enableSeparateBuildPerCPUArchitecture = true
 
 
-def enableProguardInReleaseBuilds = true
+def enableProguardInReleaseBuilds = false
 
 
 def jscFlavor = 'org.webkit:android-jsc:+'

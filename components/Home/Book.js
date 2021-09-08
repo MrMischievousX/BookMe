@@ -27,6 +27,7 @@ export default function Book({ itemData, itemSaleData, id, navigation }) {
         }
     }
 
+
     if (!(publishedDate && title && authors && averageRating && description && imageLinks && language && pageCount))
         return null
 
@@ -38,10 +39,9 @@ export default function Book({ itemData, itemSaleData, id, navigation }) {
             })}
         >
             <View style={styles.Book}>
-
                 <View style={styles.image}>
                     <Image
-                        source={{ uri: imageLinks.thumbnail }}
+                        source={{ uri: imageLinks.thumbnail.slice(0, 4) + 's' + imageLinks.thumbnail.slice(4) }}
                         style={{
                             width: '100%',
                             height: 180,
